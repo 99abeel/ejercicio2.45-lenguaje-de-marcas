@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Música Urbana — Beny Jr & Morad (245todo02)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="titulo-principal">Música Urbana - Fichas y ejemplos (245todo02)</h1>
+    <p class="subtitle">
+      Resumen y ejemplos prácticos de HTML5 + CSS3 (selectores, multimedia, tablas, formularios…)
+    </p>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#beny">Beny Jr</a></li>
+        <li><a href="#morad">Morad</a></li>
+        <li><a href="#tabla-ejemplos">Tabla con elementos</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="articulo-principal">
+      <h2 id="articulo-principal" class="destacado">Introducción</h2>
+      <p>
+        Esta página reúne ejemplos prácticos y elementos estudiados hasta el ejercicio <strong>2903</strong>: 
+        selectores CSS, unidades (px, em, rem, vw, vh), tipografías, imágenes de fondo, y elementos HTML5 
+        semánticos y multimedia.
+      </p>
+
+      <article id="beny" class="card" aria-labelledby="beny-titulo">
+        <h3 id="beny-titulo">Beny Jr — ficha rápida</h3>
+        <figure>
+          <img src="images/beny.jpg" alt="Beny Jr - retrato" width="480">
+          <figcaption>Beny Jr — artista de música urbana (imagen de muestra).</figcaption>
+        </figure>
+        <p>
+          <strong>Beny Jr</strong> es un artista emergente de música urbana. (Aquí puedes ampliar información real).
+        </p>
+
+        <p><em>Escucha un extracto:</em></p>
+        <audio controls>
+          <source src="audio/beny_song.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+
+        <p>Formato: <small>época 2020s</small> · Género: <abbr title="Música Urbana / Trap / Rap">MU</abbr></p>
+        <p>Atajos de estudio: pulsa <kbd>Ctrl</kbd> + <kbd>S</kbd> para guardar.</p>
+      </article>
+
+      <article id="morad" class="card" aria-labelledby="morad-titulo">
+        <h3 id="morad-titulo">Morad — ficha rápida</h3>
+        <figure>
+          <img src="images/morad.jpg" alt="Morad - retrato" width="480">
+          <figcaption>Morad — figura del panorama urbano (imagen de muestra).</figcaption>
+        </figure>
+        <p>
+          <strong>Morad</strong> es conocido por su estilo y letras que reflejan la realidad urbana.
+        </p>
+
+        <p><em>Videoclip destacado:</em></p>
+        <iframe width="100%" height="240"
+          src="https://www.youtube.com/embed/WSFT4OQF_mA"
+          title="Vídeo ejemplo" allowfullscreen></iframe>
+      </article>
+
+      <details style="margin-top:1rem;">
+        <summary>Nota técnica (abrir)</summary>
+        <p>
+          Este documento incluye ejemplos de tablas, forms, multimedia, selectores CSS, y muestras de unidades 
+          (px, rem, em, vw, vh).
+        </p>
+      </details>
+    </section>
+
+    <aside class="card" aria-labelledby="recursos-titulo">
+      <h3 id="recursos-titulo">Recursos & Validación</h3>
+      <ul>
+        <li>Apuntes HTML5 (estructura, tablas, multimedia)</li>
+        <li>Apuntes CSS3 (selectores, unidades, ejemplos hasta 2903)</li>
+      </ul>
+
+      <h4>Contacto</h4>
+      <address>
+        Ejemplo: <a href="mailto:alumno@ejemplo.com">alumno@ejemplo.com</a><br>
+        Sígueme en redes: <a href="#">@perfil</a>
+      </address>
+
+      <h4>Formulario de comentario</h4>
+      <form action="#" method="post" class="comment-form" aria-label="Formulario de contacto">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Tu nombre">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="tu@correo.com">
+
+        <label for="comentario">Comentario</label>
+        <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe algo..."></textarea>
+
+        <p><button type="submit">Enviar</button></p>
+      </form>
+    </aside>
+  </main>
+
+  <section class="card" aria-labelledby="tabla-ejemplos">
+    <h2 id="tabla-ejemplos">Tabla: elementos dentro de celdas (ejemplos)</h2>
+    <table border="1">
+      <caption>Ejemplos de celdas con distintos elementos HTML</caption>
+      <colgroup>
+        <col>
+        <col style="background-color: rgba(67,56,202,0.03)">
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Elemento</th>
+          <th>Uso visual</th>
+          <th>Semántica / Notas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;figure&gt; + &lt;figcaption&gt;</td>
+          <td>
+            <figure>
+              <img src="images/placeholder.jpg" alt="mini" width="120">
+              <figcaption>Mini figura</figcaption>
+            </figure>
+          </td>
+          <td data-semantic="si">Ilustración con leyenda</td>
+        </tr>
+        <tr>
+          <td>&lt;audio&gt;</td>
+          <td>
+            <audio controls>
+              <source src="audio/ejemplo.mp3" type="audio/mpeg">
+            </audio>
+          </td>
+          <td data-semantic="si">Multimedia sonoro</td>
+        </tr>
+        <tr>
+          <td>&lt;video&gt;</td>
+          <td>
+            <video width="220" controls>
+              <source src="videos/ejemplo.mp4" type="video/mp4">
+            </video>
+          </td>
+          <td data-semantic="si">Multimedia vídeo</td>
+        </tr>
+        <tr>
+          <td>&lt;details&gt;</td>
+          <td>
+            <details>
+              <summary>Información extra</summary>
+              <p>Texto desplegable.</p>
+            </details>
+          </td>
+          <td data-semantic="si">Contenido oculto</td>
+        </tr>
+        <tr>
+          <td>Listas</td>
+          <td><ul><li>Item A</li><li>Item B</li></ul></td>
+          <td data-semantic="si">Listas ordenadas / desordenadas</td>
+        </tr>
+        <tr>
+          <td>Formulario</td>
+          <td>
+            <form>
+              <input type="text" placeholder="texto">
+              <input type="checkbox" checked> <label>OK</label>
+            </form>
+          </td>
+          <td data-semantic="no">Elemento interactivo</td>
+        </tr>
+        <tr>
+          <td>Inline</td>
+          <td><p><code>code()</code> <em>énfasis</em> <cite>Obra</cite></p></td>
+          <td data-semantic="si">Etiquetas en línea</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Ejercicio 245todo02 — tema: música urbana.</p>
+  </footer>
+</body>
+</html>
