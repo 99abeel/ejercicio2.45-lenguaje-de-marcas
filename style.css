@@ -1,159 +1,151 @@
-/* === Estilos generales y selectores === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Hoja de estilos CSS Externa - ACTUALIZADA CON BOTONES */
 
+/* Selector de tipo (body) */
 body {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(180deg, #0f0f12 0%, #121218 60%);
-  color: #e9e9ef;
-  line-height: 1.5;
-  padding: 2rem;
-  font-size: 1rem;
+    font-family: Arial, "Helvetica", sans-serif;
+    
+    /* CAMBIO: Fondo gris más oscuro que combina con el negro */
+    background-color: #4a4a4a; 
+    
+    color: rgb(33, 33, 33);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* === Encabezado y navegación === */
+/* Selector de tipo (header) */
+header {
+    background-color: black;
+    color: white;
+    padding: 1.5rem; 
+    text-align: center;
+    background-image: url('bg.jpg'); 
+}
+
+/* Selector de ID */
 #titulo-principal {
-  text-align: center;
-  color: hsl(345 75% 60%);
-  font-size: 2.25rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    font-size: 3rem; 
+    font-weight: bolder; 
+    color: orange;
 }
 
-.subtitle {
-  text-align: center;
-  color: #bfc4ff;
-  margin-bottom: 1.5rem;
-  font-size: 1.05rem;
-}
-
+/* Selector de tipo (nav ul) */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1.5rem;
+    list-style: none;
+    padding: 0;
+    text-align: center; 
 }
 
+/* Estilos para la navegación horizontal */
+nav li {
+    display: inline-block;
+    /* (Ajustamos el margen para que los botones no estén tan separados) */
+    margin: 0 10px; 
+}
+
+/* CAMBIO: Estilo de botón para los enlaces de navegación */
 nav a {
-  color: #cbd5ff;
-  text-decoration: none;
-  padding: 0.35rem 0.6rem;
-  border-radius: 0.35rem;
-  transition: background 0.3s;
+    color: white;
+    background-color: #555; /* Color del botón */
+    padding: 8px 15px; /* Relleno (8px arriba/abajo, 15px izq/der) */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-decoration: none; /* Quitamos el subrayado */
+    
+    /* Añadimos una transición suave para el efecto hover */
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* CAMBIO: Efecto hover (al pasar el ratón) para los botones */
 nav a:hover {
-  background: rgba(255, 255, 255, 0.05);
+    background-color: orange; /* Mismo color que el título */
+    color: black; /* Texto negro para que contraste */
 }
 
-/* === Disposición principal === */
+
+/* Selector de tipo (main) */
 main {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 1.25rem;
-  align-items: start;
+    width: 80vw;
+    margin: 2em auto; 
+    opacity: 0.95;
+    background-color: white;
+    /* Damos bordes redondeados al contenido principal */
+    border-radius: 8px; 
 }
 
-.card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  padding: 1rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+/* Selector de tipo (section) */
+section {
+    padding: 1.5em; 
+    margin-bottom: 1cm; 
 }
 
-.destacado {
-  color: #ffd166;
-  font-weight: 700;
-  border-left: 4px solid #ffd166;
-  padding: 0.5rem 0.75rem;
-  background: rgba(255, 209, 102, 0.04);
-  margin: 0.5rem 0;
+/* Hacemos que el <article> contenga la imagen flotante */
+section article {
+    overflow: auto; 
 }
 
-/* === Figuras e imágenes === */
-figure {
-  margin: 0 0 0.75rem 0;
-  text-align: center;
+/* Estilos para las figuras (fotos) en las biografías */
+section article figure {
+    float: right; 
+    width: 240px; 
+    margin: 0 0 15px 20px; 
 }
 
-figure img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
+/* Estilos para las imágenes dentro de esas figuras */
+section article img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
 }
 
+/* Generalizado para todas las leyendas */
 figcaption {
-  font-size: 0.9rem;
-  color: #c7cbe8;
-  margin-top: 0.35rem;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
 }
 
-/* === Tablas === */
+/* Estilos de tabla */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  font-size: 0.95rem;
+    width: 100%; 
+    margin-top: 15px; 
 }
 
-thead th {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 0.6rem;
-  text-align: left;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.04);
+/* Selector de tipo (th, td) */
+th, td {
+    border: 1px solid #ccc; 
+    padding: 0.75em; 
+    text-align: left; 
 }
 
-tbody td {
-  padding: 0.6rem;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.03);
-  vertical-align: middle;
+th {
+    background-color: #333;
+    color: white;
 }
 
-table tbody td:nth-child(2) {
-  background: rgba(67, 56, 202, 0.06);
+/* Regla de 'video' separada de 'img' */
+video, iframe {
+    width: 100%;
+    height: auto;
 }
 
-table tbody td[data-semantic="si"] {
-  font-weight: 600;
+/* Estilos para la nueva figura en la tabla */
+#tabla-comparativa figure {
+    margin: 0;
+    width: 100%;
 }
 
-/* === Formularios === */
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(255, 255, 255, 0.015);
-  color: inherit;
+#tabla-comparativa img {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px; 
 }
 
-input[type="text"] {
-  border: 2px solid rgba(255, 255, 255, 0.04);
-}
-
-/* === Footer === */
+/* Selector de tipo (footer) */
 footer {
-  margin-top: 1.5rem;
-  text-align: center;
-  color: #9ea3d6;
-  font-size: 0.9rem;
-}
-
-/* === Responsive === */
-@media (max-width: 900px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  #titulo-principal {
-    font-size: 1.75rem;
-  }
+    text-align: center; 
+    padding: 1em; 
+    background-color: #333;
+    color: #aaa;
+    margin-top: 5vh; 
 }
