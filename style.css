@@ -1,10 +1,7 @@
-/* Hoja de estilos CSS Externa - ACTUALIZADA CON BOTONES */
 
-/* Selector de tipo (body) */
 body {
     font-family: Arial, "Helvetica", sans-serif;
     
-    /* CAMBIO: Fondo gris más oscuro que combina con el negro */
     background-color: #4a4a4a; 
     
     color: rgb(33, 33, 33);
@@ -13,7 +10,6 @@ body {
     padding: 0;
 }
 
-/* Selector de tipo (header) */
 header {
     background-color: black;
     color: white;
@@ -22,82 +18,70 @@ header {
     background-image: url('bg.jpg'); 
 }
 
-/* Selector de ID */
 #titulo-principal {
     font-size: 3rem; 
     font-weight: bolder; 
     color: orange;
 }
 
-/* Selector de tipo (nav ul) */
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center; 
 }
 
-/* Estilos para la navegación horizontal */
 nav li {
     display: inline-block;
-    /* (Ajustamos el margen para que los botones no estén tan separados) */
     margin: 0 10px; 
 }
 
-/* CAMBIO: Estilo de botón para los enlaces de navegación */
 nav a {
     color: white;
-    background-color: #555; /* Color del botón */
-    padding: 8px 15px; /* Relleno (8px arriba/abajo, 15px izq/der) */
-    border-radius: 5px; /* Esquinas redondeadas */
-    text-decoration: none; /* Quitamos el subrayado */
+    background-color: #555; 
+    padding: 8px 15px; 
+    border-radius: 5px; 
+    text-decoration: none; 
     
-    /* Añadimos una transición suave para el efecto hover */
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* CAMBIO: Efecto hover (al pasar el ratón) para los botones */
 nav a:hover {
-    background-color: orange; /* Mismo color que el título */
-    color: black; /* Texto negro para que contraste */
+    background-color: orange; 
+    color: black; 
 }
 
-
-/* Selector de tipo (main) */
 main {
     width: 80vw;
     margin: 2em auto; 
     opacity: 0.95;
     background-color: white;
-    /* Damos bordes redondeados al contenido principal */
     border-radius: 8px; 
 }
 
-/* Selector de tipo (section) */
 section {
     padding: 1.5em; 
     margin-bottom: 1cm; 
 }
 
-/* Hacemos que el <article> contenga la imagen flotante */
-section article {
-    overflow: auto; 
+#bio-beny article, #bio-morad article {
+    overflow: auto;
 }
-
-/* Estilos para las figuras (fotos) en las biografías */
-section article figure {
+#bio-beny figure, #bio-morad figure {
     float: right; 
     width: 240px; 
     margin: 0 0 15px 20px; 
 }
-
-/* Estilos para las imágenes dentro de esas figuras */
-section article img {
+#bio-beny img, #bio-morad img {
     width: 100%; 
     height: auto; 
     border-radius: 8px; 
 }
 
-/* Generalizado para todas las leyendas */
+#bio-beny, #bio-morad {
+    padding: 1.5em; 
+    margin-bottom: 1cm; 
+}
+
 figcaption {
     font-size: 0.9em;
     color: #555;
@@ -105,13 +89,11 @@ figcaption {
     margin-top: 5px;
 }
 
-/* Estilos de tabla */
 table {
     width: 100%; 
     margin-top: 15px; 
 }
 
-/* Selector de tipo (th, td) */
 th, td {
     border: 1px solid #ccc; 
     padding: 0.75em; 
@@ -123,13 +105,11 @@ th {
     color: white;
 }
 
-/* Regla de 'video' separada de 'img' */
 video, iframe {
     width: 100%;
     height: auto;
 }
 
-/* Estilos para la nueva figura en la tabla */
 #tabla-comparativa figure {
     margin: 0;
     width: 100%;
@@ -141,7 +121,6 @@ video, iframe {
     border-radius: 8px; 
 }
 
-/* Selector de tipo (footer) */
 footer {
     text-align: center; 
     padding: 1em; 
